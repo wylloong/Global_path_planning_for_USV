@@ -5,10 +5,10 @@ All rights reserved.
 Distributed under the BSD license.
 """
 
-from shapely.geometry import Polygon,Point  # 比较多边形交叉
+from shapely.geometry import Polygon,Point 
 
 def point_in_polygon(point_x, point_y, polygonlist_x,polygonlist_y):
-    #如果出问题，注意坐标转换
+    # Be careful about the Coordinate Translation.
     point = Point(point_x,point_y)
     i = 0
     polygonlist = []
@@ -20,7 +20,7 @@ def point_in_polygon(point_x, point_y, polygonlist_x,polygonlist_y):
     return poly.contains(point)
 
 if __name__=='__main__':
-    # 测试点包含在多边形中
+    # The test point
     polygonlist_x=[]
     polygonlist_x.append(25.774252)
     polygonlist_x.append(18.466465)
